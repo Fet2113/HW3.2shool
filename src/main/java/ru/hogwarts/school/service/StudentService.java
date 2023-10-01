@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface StudentService {
     Student add(Student student);
     Optional<Student> get(Long id);
-    Student update(Long id, Student student);
+    Student update(Long id, String name, int age);
     void delete(Long id);
     public List<Student> getByAge(int age);
 }

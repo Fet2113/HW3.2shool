@@ -21,7 +21,7 @@ public class FacultyServiceImpl implements FacultyService {
 
     @Override
     public Faculty add(Faculty faculty) {
-       return facultyRepository.save(faculty);
+        return facultyRepository.save(faculty);
 
     }
 
@@ -31,9 +31,13 @@ public class FacultyServiceImpl implements FacultyService {
 
     }
 
+
     @Override
-    public Faculty update(Long id, Faculty faculty) {
-     return facultyRepository.save(faculty);
+    public Faculty update(Long id, String name, String color) {
+        Faculty facultyForUpdate = facultyRepository.findById(id).get();
+        facultyForUpdate.setName(name);
+        facultyForUpdate.setColor(color);
+        return facultyRepository.save(facultyForUpdate);
 
     }
 

@@ -7,9 +7,13 @@ import java.util.Optional;
 
 public interface FacultyService {
     Faculty add(Faculty faculty);
+
     Optional<Faculty> get(Long id);
-    Faculty update(Long id, Faculty faculty);
+
+    Faculty update(Long id, String name, String color);
+
     void delete(Long id);
+
     public List<Faculty> getByColor(String color);
 
 }
