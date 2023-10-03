@@ -42,10 +42,20 @@ public class StudentController {
         return ResponseEntity.ok().build();
     }
 
-    @DeleteMapping
-    public ResponseEntity<List<Student>> getByAge(@RequestParam("age") int age) {
+    @GetMapping("/by.age")
+    public ResponseEntity<List<Student>> getByAge(@RequestParam("by.age") int age) {
         return ResponseEntity.ok(studentService.getByAge(age));
     }
+    @GetMapping("/by-age-between")
+    public List<Student> getByAgeBetween(@RequestParam int min, @RequestParam int max) {
+        return studentService.getByAgeBetween(min, max);
+    }
+
+    @GetMapping("/faculty-by-student-id")
+    public Faculty getFacultyByStudentId(@RequestParam Long id) {
+        return studentService.getFacultyByStudentId(id);
+    }
+
 
 
 }
