@@ -1,6 +1,8 @@
 package ru.hogwarts.school.service;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -54,8 +56,13 @@ public class AvatarServiceImpl implements AvatarService {
             avatarRepository.save(avatar);
         }
         private String getExtensions(String fileName) {
-            return fileName.substring(fileName.lastIndexOf(".") + 1);
+
+        return fileName.substring(fileName.lastIndexOf(".") + 1);
         }
+
+    public Page<Avatar> getWithPageable(int page, int count) {
+        return avatarRepository.findAll(PageRequest.of(page, count));
+    }
 
     }
 
