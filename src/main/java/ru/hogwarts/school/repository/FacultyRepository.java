@@ -14,5 +14,4 @@ public interface FacultyRepository extends JpaRepository<Faculty, Long> {
 
     List<Faculty> findByNameIgnoreCase(String name);
 
-    Object findByFacultyId(long l);
 }
