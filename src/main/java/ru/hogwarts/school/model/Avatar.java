@@ -1,10 +1,7 @@
 package ru.hogwarts.school.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Lob;
-import jakarta.persistence.OneToOne;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.*;
+
 
 import java.util.Arrays;
 import java.util.Objects;

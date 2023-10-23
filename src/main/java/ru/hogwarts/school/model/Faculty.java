@@ -1,11 +1,6 @@
 package ru.hogwarts.school.model;
 
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.OneToMany;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.data.annotation.Id;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.*;
 
 import javax.annotation.processing.Generated;
 import java.util.List;
