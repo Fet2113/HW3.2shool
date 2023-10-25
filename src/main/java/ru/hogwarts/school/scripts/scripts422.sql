@@ -5,7 +5,6 @@ create table car (
 	price int
 );
 
-
 create table person (
 	id int primary key,
 	namee text,

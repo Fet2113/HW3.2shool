@@ -20,6 +20,5 @@ add constraints faculty_name_and_color_constraint unique(name, color));
 
 
 -- При создании студента без возраста ему автоматически должно присваиваться 20 лет.
-
 alter table student
 column age set default 20;
